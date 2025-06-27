@@ -1,0 +1,16 @@
+services:
+  webhook-proxy:
+    image: node:18
+    container_name: from-owncast-to-sammi
+    working_dir: /app
+    volumes:
+      - /apps/from-owncast-to-sammi:/app
+    ports:
+      - "3000:3000"
+    environment:
+      WEBHOOK_TOKEN: "your_secure_token_here"     # Token for Owncast → Server
+      SAMMI_IP: "127.0.0.1"                       # IP where SAMMI is located
+      SAMMI_PORT: "9450"                          # SAMMI port (default is 9450)
+      SAMMI_API_KEY: "your_sammi_api_key_here"    # SAMMI API key (leave empty if not set)
+    command: >
+      sh -c "npm install && node index.js"
