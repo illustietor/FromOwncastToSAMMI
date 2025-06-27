@@ -1,4 +1,4 @@
-#From Owncast to SAMMI (Webhook Bridge)
+# From Owncast to SAMMI (Webhook Bridge)
 
 A lightweight Node.js server that listens for webhooks from an [Owncast](https://owncast.online/) instance, transforms the event data, and forwards it to a local [SAMMI](https://sammi.solutions/) client.
 
@@ -6,7 +6,7 @@ This allows you to automate SAMMI buttons and actions based on events from your 
 
 ---
 
-##✨ Features
+## ✨ Features
 
 - Receives JSON webhooks from Owncast
 - Parses and transforms event data
@@ -18,7 +18,7 @@ This allows you to automate SAMMI buttons and actions based on events from your 
 
 ---
 
-##📦 Requirements
+## 📦 Requirements
 
 - Node.js 18+ **(if running manually)**
 - Docker & Docker Compose **(recommended)**
@@ -27,9 +27,9 @@ This allows you to automate SAMMI buttons and actions based on events from your 
 
 ---
 
-##🚀 How to Use
+## 🚀 How to Use
 
-###🔧 With Docker Compose
+### 🔧 With Docker Compose
 
 1. Clone the repository and go to the project folder.
 2. Edit the `docker-compose.yml` file to set your own values for:
@@ -48,7 +48,7 @@ docker-compose up -d
 
 ---
 
-###🧪 Manual Test
+### 🧪 Manual Test
 
 You can test the server with curl:
 
@@ -60,7 +60,7 @@ curl -X POST "http://localhost:3000/webhook?token=your_secure_token_here" \
 
 ---
 
-##🔁 Supported Owncast Events
+## 🔁 Supported Owncast Events
 
 - CHAT → Chat message
 
@@ -78,7 +78,7 @@ curl -X POST "http://localhost:3000/webhook?token=your_secure_token_here" \
 
 ---
 
-##🔒 Security
+## 🔒 Security
 - Requests from Owncast must include a token as a query parameter:
 Example: http://your-server.com/webhook?token=your_secure_token
 
@@ -86,6 +86,6 @@ Example: http://your-server.com/webhook?token=your_secure_token
 
 ---
 
-##📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
